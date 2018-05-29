@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="algae_farm">
+    <static>true</static>
+    <link name="algae_link">
+      <collision name="algae_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://algae_farm/meshes/seaweed.dae</uri></mesh>
+        </geometry>
+        <laser_retro>200</laser_retro>
+      </collision>
+
+      <visual name="algae_visual">
+        <cast_shadows>true</cast_shadows>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://algae_farm/meshes/seaweed.dae</uri></mesh>
+        </geometry>
+		<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grass</name>
+           </script>
+        </material>
+		<laser_retro>200</laser_retro>
+      </visual>
+    </link>
+    <link name="buoys_link">
+      <visual name="buoys_visual">
+        <cast_shadows>true</cast_shadows>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://algae_farm/meshes/buoys.dae</uri></mesh>
+        </geometry>
+		<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Orange</name>
+           </script>
+        </material>
+		<laser_retro>200</laser_retro>
+      </visual>
+    </link>
+    <link name="ropes_link">
+      <visual name="ropes_visual">
+        <cast_shadows>true</cast_shadows>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://algae_farm/meshes/ropes.dae</uri></mesh>
+        </geometry>
+		<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/GreyTransparent</name>
+           </script>
+        </material>
+		<laser_retro>200</laser_retro>
+      </visual>
+    </link>
+    <link name="anchors_link">
+      <visual name="anchors_visual">
+        <cast_shadows>true</cast_shadows>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://algae_farm/meshes/anchors.dae</uri></mesh>
+        </geometry>
+		<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/DarkGrey</name>
+           </script>
+        </material>
+		<laser_retro>200</laser_retro>
+      </visual>
+    </link>
+  </model>
+</sdf>
